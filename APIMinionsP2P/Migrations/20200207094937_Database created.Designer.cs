@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace APIMinionsP2P.Migrations
 {
     [DbContext(typeof(APIMinionsP2PContext))]
-    [Migration("20200207085046_FirstMigration")]
-    partial class FirstMigration
+    [Migration("20200207094937_Database created")]
+    partial class Databasecreated
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,69 +20,6 @@ namespace APIMinionsP2P.Migrations
                 .HasAnnotation("ProductVersion", "3.0.0")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-            modelBuilder.Entity("APIMinionsP2P.Models.Deudor", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("City")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Country")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("DNI")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("State")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Street")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("ZipCode")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Deudor");
-                });
-
-            modelBuilder.Entity("APIMinionsP2P.Models.Lender", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("City")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Country")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PhoneNumber")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Street")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ZipCode")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Lender");
-                });
 
             modelBuilder.Entity("APIMinionsP2P.Models.Loan", b =>
                 {
@@ -118,16 +55,46 @@ namespace APIMinionsP2P.Migrations
                     b.ToTable("Loan");
                 });
 
+            modelBuilder.Entity("APIMinionsP2P.Models.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("City")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Country")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DNI")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("State")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Street")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ZipCode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Deudor");
+                });
+
             modelBuilder.Entity("APIMinionsP2P.Models.Loan", b =>
                 {
-                    b.HasOne("APIMinionsP2P.Models.Deudor", "Deudor")
-                        .WithMany("Loan")
+                    b.HasOne("APIMinionsP2P.Models.User", "Deudor")
+                        .WithMany()
                         .HasForeignKey("DeudorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("APIMinionsP2P.Models.Lender", "Lender")
-                        .WithMany("Loan")
+                    b.HasOne("APIMinionsP2P.Models.User", "Lender")
+                        .WithMany()
                         .HasForeignKey("LenderId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();

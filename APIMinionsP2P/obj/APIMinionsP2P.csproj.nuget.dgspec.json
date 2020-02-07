@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\David\\Documents\\Repos\\pasiona\\Git\\MinionsP2P\\minionsp2papi\\APIMinionsP2P\\APIMinionsP2P.csproj": {}
+    "C:\\Users\\rjimenez\\Documents\\Pasiona\\minionsp2papi\\APIMinionsP2P\\APIMinionsP2P.csproj": {}
   },
   "projects": {
-    "C:\\Users\\David\\Documents\\Repos\\pasiona\\Git\\MinionsP2P\\minionsp2papi\\APIMinionsP2P\\APIMinionsP2P.csproj": {
+    "C:\\Users\\rjimenez\\Documents\\Pasiona\\minionsp2papi\\APIMinionsP2P\\APIMinionsP2P.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\David\\Documents\\Repos\\pasiona\\Git\\MinionsP2P\\minionsp2papi\\APIMinionsP2P\\APIMinionsP2P.csproj",
+        "projectUniqueName": "C:\\Users\\rjimenez\\Documents\\Pasiona\\minionsp2papi\\APIMinionsP2P\\APIMinionsP2P.csproj",
         "projectName": "APIMinionsP2P",
-        "projectPath": "C:\\Users\\David\\Documents\\Repos\\pasiona\\Git\\MinionsP2P\\minionsp2papi\\APIMinionsP2P\\APIMinionsP2P.csproj",
-        "packagesPath": "C:\\Users\\David\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\David\\Documents\\Repos\\pasiona\\Git\\MinionsP2P\\minionsp2papi\\APIMinionsP2P\\obj\\",
+        "projectPath": "C:\\Users\\rjimenez\\Documents\\Pasiona\\minionsp2papi\\APIMinionsP2P\\APIMinionsP2P.csproj",
+        "packagesPath": "C:\\Users\\rjimenez\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rjimenez\\Documents\\Pasiona\\minionsp2papi\\APIMinionsP2P\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\David\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rjimenez\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -75,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
