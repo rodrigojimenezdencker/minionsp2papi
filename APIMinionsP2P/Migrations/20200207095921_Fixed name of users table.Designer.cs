@@ -4,14 +4,16 @@ using APIMinionsP2P.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace APIMinionsP2P.Migrations
 {
     [DbContext(typeof(APIMinionsP2PContext))]
-    partial class APIMinionsP2PContextModelSnapshot : ModelSnapshot
+    [Migration("20200207095921_Fixed name of users table")]
+    partial class Fixednameofuserstable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -69,13 +71,10 @@ namespace APIMinionsP2P.Migrations
                     b.Property<string>("DNI")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("State")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Street")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Surname")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ZipCode")

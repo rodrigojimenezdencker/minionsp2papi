@@ -14,8 +14,8 @@ namespace APIMinionsP2P.Models
         {
         }
 
-        public DbSet<APIMinionsP2P.Models.User> Deudor { get; set; }
+        public DbSet<APIMinionsP2P.Models.Users> Users { get; set; }
 
-        public DbSet<APIMinionsP2P.Models.Loan> Loan { get; set; }
+        public DbSet<APIMinionsP2P.Models.Loans> Loans { get; set; }
     }
 }

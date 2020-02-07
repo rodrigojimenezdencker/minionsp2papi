@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace APIMinionsP2P.Models
 {
-    public class Loan
+    public class Loans
     {
         public int Id { get; set; }
         public int DeudorId { get; set; }
-        public User Deudor { get; set; }
+        public Users Deudor { get; set; }
         public int LenderId { get; set; }
-        public User Lender { get; set; }
+        public Users Lender { get; set; }
         public int Tae { get; set; }
         public int Amount { get; set; }
         [DataType(DataType.Date)]

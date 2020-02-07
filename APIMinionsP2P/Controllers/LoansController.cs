@@ -22,16 +22,16 @@ namespace APIMinionsP2P.Controllers
 
         // GET: api/Loans
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Loan>>> GetLoan()
+        public async Task<ActionResult<IEnumerable<Loans>>> GetLoan()
         {
-            return await _context.Loan.ToListAsync();
+            return await _context.Loans.ToListAsync();
         }
 
         // GET: api/Loans/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Loan>> GetLoan(int id)
+        public async Task<ActionResult<Loans>> GetLoan(int id)
         {
-            var loan = await _context.Loan.FindAsync(id);
+            var loan = await _context.Loans.FindAsync(id);
 
             if (loan == null)
             {
@@ -45,7 +45,7 @@ namespace APIMinionsP2P.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutLoan(int id, Loan loan)
+        public async Task<IActionResult> PutLoan(int id, Loans loan)
         {
             if (id != loan.Id)
             {
@@ -77,9 +77,9 @@ namespace APIMinionsP2P.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
         [HttpPost]
-        public async Task<ActionResult<Loan>> PostLoan(Loan loan)
+        public async Task<ActionResult<Loans>> PostLoan(Loans loan)
         {
-            _context.Loan.Add(loan);
+            _context.Loans.Add(loan);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetLoan", new { id = loan.Id }, loan);
@@ -87,15 +87,15 @@ namespace APIMinionsP2P.Controllers
 
         // DELETE: api/Loans/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Loan>> DeleteLoan(int id)
+        public async Task<ActionResult<Loans>> DeleteLoan(int id)
         {
-            var loan = await _context.Loan.FindAsync(id);
+            var loan = await _context.Loans.FindAsync(id);
             if (loan == null)
             {
                 return NotFound();
             }
 
-            _context.Loan.Remove(loan);
+            _context.Loans.Remove(loan);
             await _context.SaveChangesAsync();
 
             return loan;
@@ -103,7 +103,7 @@ namespace APIMinionsP2P.Controllers
 
         private bool LoanExists(int id)
         {
-            return _context.Loan.Any(e => e.Id == id);
+            return _context.Loans.Any(e => e.Id == id);
         }
     }
 }
