@@ -11,48 +11,48 @@ namespace APIMinionsP2P.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class DeudorsController : ControllerBase
+    public class UsersController : ControllerBase
     {
         private readonly APIMinionsP2PContext _context;
 
-        public DeudorsController(APIMinionsP2PContext context)
+        public UsersController(APIMinionsP2PContext context)
         {
             _context = context;
         }
 
-        // GET: api/Deudors
+        // GET: api/Users
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Deudor>>> GetDeudor()
+        public async Task<ActionResult<IEnumerable<User>>> GetDeudor()
         {
             return await _context.Deudor.ToListAsync();
         }
 
-        // GET: api/Deudors/5
+        // GET: api/Users/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Deudor>> GetDeudor(int id)
+        public async Task<ActionResult<User>> GetUser(int id)
         {
-            var deudor = await _context.Deudor.FindAsync(id);
+            var user = await _context.Deudor.FindAsync(id);
 
-            if (deudor == null)
+            if (user == null)
             {
                 return NotFound();
             }
 
-            return deudor;
+            return user;
         }
 
-        // PUT: api/Deudors/5
+        // PUT: api/Users/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutDeudor(int id, Deudor deudor)
+        public async Task<IActionResult> PutUser(int id, User user)
         {
-            if (id != deudor.Id)
+            if (id != user.Id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(deudor).State = EntityState.Modified;
+            _context.Entry(user).State = EntityState.Modified;
 
             try
             {
@@ -60,7 +60,7 @@ namespace APIMinionsP2P.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!DeudorExists(id))
+                if (!UserExists(id))
                 {
                     return NotFound();
                 }
@@ -73,35 +73,35 @@ namespace APIMinionsP2P.Controllers
             return NoContent();
         }
 
-        // POST: api/Deudors
+        // POST: api/Users
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
         [HttpPost]
-        public async Task<ActionResult<Deudor>> PostDeudor(Deudor deudor)
+        public async Task<ActionResult<User>> PostUser(User user)
         {
-            _context.Deudor.Add(deudor);
+            _context.Deudor.Add(user);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetDeudor", new { id = deudor.Id }, deudor);
+            return CreatedAtAction("GetUser", new { id = user.Id }, user);
         }
 
-        // DELETE: api/Deudors/5
+        // DELETE: api/Users/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Deudor>> DeleteDeudor(int id)
+        public async Task<ActionResult<User>> DeleteUser(int id)
         {
-            var deudor = await _context.Deudor.FindAsync(id);
-            if (deudor == null)
+            var user = await _context.Deudor.FindAsync(id);
+            if (user == null)
             {
                 return NotFound();
             }
 
-            _context.Deudor.Remove(deudor);
+            _context.Deudor.Remove(user);
             await _context.SaveChangesAsync();
 
-            return deudor;
+            return user;
         }
 
-        private bool DeudorExists(int id)
+        private bool UserExists(int id)
         {
             return _context.Deudor.Any(e => e.Id == id);
         }

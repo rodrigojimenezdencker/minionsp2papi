@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\David\\Desktop\\Pasiona Stuff\\APIs\\APIMinionsP2P\\APIMinionsP2P\\APIMinionsP2P.csproj": {}
+    "C:\\Users\\David\\Documents\\Repos\\pasiona\\Git\\MinionsP2P\\minionsp2papi\\APIMinionsP2P\\APIMinionsP2P.csproj": {}
   },
   "projects": {
-    "C:\\Users\\David\\Desktop\\Pasiona Stuff\\APIs\\APIMinionsP2P\\APIMinionsP2P\\APIMinionsP2P.csproj": {
+    "C:\\Users\\David\\Documents\\Repos\\pasiona\\Git\\MinionsP2P\\minionsp2papi\\APIMinionsP2P\\APIMinionsP2P.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\David\\Desktop\\Pasiona Stuff\\APIs\\APIMinionsP2P\\APIMinionsP2P\\APIMinionsP2P.csproj",
+        "projectUniqueName": "C:\\Users\\David\\Documents\\Repos\\pasiona\\Git\\MinionsP2P\\minionsp2papi\\APIMinionsP2P\\APIMinionsP2P.csproj",
         "projectName": "APIMinionsP2P",
-        "projectPath": "C:\\Users\\David\\Desktop\\Pasiona Stuff\\APIs\\APIMinionsP2P\\APIMinionsP2P\\APIMinionsP2P.csproj",
+        "projectPath": "C:\\Users\\David\\Documents\\Repos\\pasiona\\Git\\MinionsP2P\\minionsp2papi\\APIMinionsP2P\\APIMinionsP2P.csproj",
         "packagesPath": "C:\\Users\\David\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\David\\Desktop\\Pasiona Stuff\\APIs\\APIMinionsP2P\\APIMinionsP2P\\obj\\",
+        "outputPath": "C:\\Users\\David\\Documents\\Repos\\pasiona\\Git\\MinionsP2P\\minionsp2papi\\APIMinionsP2P\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\David\\AppData\\Roaming\\NuGet\\NuGet.Config",
